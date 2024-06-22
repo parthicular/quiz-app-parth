@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fashion Forward: Sustainability and You</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+    <h1>Fashion Forward: Sustainability and You</h1>
+  </div>
+      <div class="quiz-container">
+        <div id="quiz"></div>
+        <button id="previous">Previous Question</button>
+        <button id="next">Next Question</button>
+        <button id="submit">Submit Quiz</button>
+      </div>
+  
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.querySelector('.header');
+      let lastScrollTop = 0;
+      let scrollTimeout;
+  
+      window.addEventListener('scroll', () => {
+        const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+  
+        if (currentScrollTop > lastScrollTop) {
+         
+          header.classList.add('header-hidden');
+          if (scrollTimeout) {
+            clearTimeout(scrollTimeout); 
+          }
+        } else {
+          
+          if (scrollTimeout) {
+            clearTimeout(scrollTimeout); 
+          }
+          scrollTimeout = setTimeout(() => {
+            header.classList.remove('header-hidden');
+          }, 300); 
+        }
+  
+        lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; 
+      });
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Results</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+        <h1>Quiz Results</h1>
+            <div id="results-container">
+                <p id="results-text">Your results will appear here.</p>
+                <button id="retake-quiz">Retake Quiz</button>
+            </div>
+            
+   
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const resultsText = document.getElementById('results-text');
+      const results = localStorage.getItem('quizResults') || 'No results found';
+      resultsText.innerText = results;
+
+      const retakeQuizButton = document.getElementById('retake-quiz');
+      retakeQuizButton.addEventListener('click', () => {
+        window.location.href = 'welcome.html';
+      });
+    });
+  </script>
+</body>
+</html>

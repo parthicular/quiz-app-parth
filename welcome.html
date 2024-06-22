@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to the Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Fashion Forward: Sustainability and You</h1>
+  </div>
+
+  </header>
+  <div id="welcome-page" class="page">
+    
+    <p>
+      This fun and informative quiz will challenge your knowledge about sustainable 
+      fashion and its impact on the environment. Discover how much you know about 
+      eco-friendly materials, practices, and the fashion industry's role in sustainability. 
+      Let's see how well you can score on this journey to a greener wardrobe!
+    </p>
+    <form id="start-form">
+      <label for="name"><b>Enter your name:</b></label>
+      <input type="text" id="name" name="name" required>
+      <button type="button" id="start-button">Start Quiz</button>
+    </form>
+  </div>
+
+  
+
+  <script>
+    document.getElementById('start-button').addEventListener('click', function() {
+      const name = document.getElementById('name').value;
+      if (name) {
+        localStorage.setItem('userName', name); 
+        window.location.href = 'quiz.html'; 
+      } else {
+        alert('Please enter your name.');
+      }
+    });
+  </script>
+</body>
+</html>
