@@ -3,7 +3,10 @@ This is a code for a for quiz app. It has 3 types of questions: multiple-choice,
 
 For that reason, here is how I run it. It may work for you or you will have to troubleshoot. Good luck
 
-Open the code folder in Visual Studio Code Open a terminal Enter: pip install flask Enter: pip install flask-cors Enter: python server.py
+Open the code folder in Visual Studio Code Open a terminal 
+Enter: pip install flask 
+Enter: pip install flask-cors 
+Enter: python server.py
 
 Then open the welcome.html file and it should start. hopefully.
 
